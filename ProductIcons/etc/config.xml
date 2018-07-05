@@ -6,7 +6,12 @@
             <general>
                 <enableproductinfo>0</enableproductinfo>
                 <enableproducttopbar>1</enableproducttopbar>
-                <displaysize>1</displaysize>
+                <displayhandlinked>1</displayhandlinked>
+                <displaygauge>1</displaygauge>
+                <displayconstruction>1</displayconstruction>
+                <displaylength>1</displaylength>
+                <displaymanufacturelocation>1</displaymanufacturelocation>
+                <displayyarn>1</displayyarn>
             </general>
         </producticons>
     </default>

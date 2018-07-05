@@ -4,16 +4,16 @@ namespace TPB\ProductIcons\Attributes;
 
 use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 
-class Size
+class Length
 {
     /** @var string */
-    const ATTR_CODE        = 'size';
+    const ATTR_CODE        = 'length';
     /** @var string */
-    const ATTR_LABEL       = 'Size';
+    const ATTR_LABEL       = 'Length';
     /** @var string */
     const ATTR_GROUP_NAME  = 'Product Icons';
     /** @var string */
-    const ATTR_CONFIG_CODE = 'displaysize';
+    const ATTR_CONFIG_CODE = 'displaylength';
 
     /**
      * @return array
@@ -23,16 +23,28 @@ class Size
         $options = [
             'value' => [
                 'option_0' => [
-                    0 => 'Small',
-                    1 => 'Small',
+                    0 => 'Standard/Long Anklet (m)',
+                    1 => 'Standard/Long Anklet',
                 ],
                 'option_1' => [
-                    0 => 'Medium',
-                    1 => 'Medium',
+                    0 => 'Long/Over the calf (m)',
+                    1 => 'Long/Over the calf',
                 ],
                 'option_2' => [
-                    0 => 'Large',
-                    1 => 'Large',
+                    0 => 'No-Show Socks (m)',
+                    1 => 'No-Show Socks',
+                ],
+                'option_3' => [
+                    0 => 'Short/Anklet (w)',
+                    1 => 'Short/Anklet',
+                ],
+                'option_4' => [
+                    0 => 'Knee-High (w)',
+                    1 => 'Knee-High',
+                ],
+                'option_5' => [
+                    0 => 'Invisible Socks (w)',
+                    1 => 'No-Show Socks (Women\'s)',
                 ],
             ],
         ];
@@ -75,20 +87,29 @@ class Size
 
     /**
      * @param string $data
-     * 
+     *
      * @return string
      */
     public static function getIconFileNameByAttributeLabel(string $data) :string
     {
         switch ($data) {
-            case 'Small':
-                return 'small.png';
+            case 'Standard/Long Anklet':
+                return 'standard_long_anklet.png';
                 break;
-            case 'Medium':
-                return 'medium.png';
+            case 'Long/Over the calf':
+                return 'long_over_calf.png';
                 break;
-            case 'Large':
-                return 'large.png';
+            case 'No-Show Socks':
+                return 'no_show.png';
+                break;
+            case 'Short/Anklet':
+                return 'short_anklet.png';
+                break;
+            case 'Knee-High':
+                return 'knee_high.png';
+                break;
+            case 'No-Show Socks (Women\'s)':
+                return 'invisible.png';
                 break;
 
             default:
